@@ -39,6 +39,30 @@
                         @enderror  
                     </div>
 
+                    <div class="form-group">
+                      <label for=""><b>Password</b></label>
+                        <input type="password" class="form-control @error('password') is-invalid @enderror"
+                         name="password" placeholder="Password">
+
+                         @error('password')
+                          <div class="invalid-feedback">
+                            {{ $message }}
+                          </div>
+                        @enderror  
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""><b>Konfirmasi Password</b></label>
+                        <input type="password" class="form-control @error('re_password') is-invalid @enderror" 
+                        name="re_password" placeholder="Password">
+
+                        @error('re_password')
+                          <div class="invalid-feedback">
+                            {{ $message }}
+                          </div>
+                        @enderror  
+                    </div>   
+
                     <a href="/admin/user" class="btn btn-info"><i class="fas fa-arrow-left"></i> Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
